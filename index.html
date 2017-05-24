@@ -14,29 +14,44 @@
 
     <script src="js/anime.min.js"></script>
     <script src="js/index.js"></script>
+    <script type="application/javascript">
+
+function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+}
+
+window.addEventListener('DOMContentLoaded', function(e) {
+
+    var iFrame = document.getElementById( 'content' );
+    resizeIFrameToFitContent( iFrame );
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+</script>
+
 </head>
 
 <body>
     <div class="mainBar">
         <div class="mainBarTitle">
-            <a id="mainBarTitle" class="barLink" href="index.html">jmalexan</a>
+            <a id="mainBarTitle" class="barLink" href="index.html" target="content">jmalexan</a>
         </div>
         <div class="mainBarTab">
-            <a id="mainBarAbout" class="barLink" href="about.html">about</a>
+            <a id="mainBarAbout" class="barLink" href="about.html" target="content">about</a>
         </div>
         <div class="mainBarTab">
-            <a id="mainBarProjects" class="barLink" href="projects.html">projects</a>
+            <a id="mainBarProjects" class="barLink" href="projects.html" target="content">projects</a>
         </div>
     </div>
 
-    <div class="content">
-        <h1>Welcome!</h1>
-        <br>
-        <br>
-        <p>Please feel free to check out my personal projects or my about page.</p>
-        <br>
-        <p>>_ Jonathan</p>
-    </div>
+    <iframe name="content" class="content" src="main.html"/>
     
 </body>
 
