@@ -15,8 +15,16 @@ body {
     font-family: 'Share Tech Mono', monospace;
 }
 
+h1 {
+    font-size: 24px
+}
+
 .mainBar {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 40px);
     padding: 20px;
+    padding-bottom: 35px;
 }
 
 .mainBarTitle {
@@ -35,11 +43,22 @@ body {
 }
 
 .link {
+    color: black;
+}
+
+.barLink {
     text-decoration: none;
     color: black;
 }
 
 .wip {
     text-align: center;
-    padding-top: 50%;
+}
+
+.content {
+    text-align: left;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
