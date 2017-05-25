@@ -4,6 +4,7 @@ window.onload = function() {
     var title = document.getElementById('mainBarTitle');
     var projects = document.getElementById("mainBarProjects");
     var about = document.getElementById("mainBarAbout");
+    var signature = document.getElementById("signature");
     var titleFinalText = title.innerHTML
     var projectsFinalText = projects.innerHTML
     var aboutFinalText = about.innerHTML
