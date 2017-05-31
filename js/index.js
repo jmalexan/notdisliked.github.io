@@ -6,12 +6,12 @@ window.onload = function() {
     var about = document.getElementById("mainBarAbout");
     var signature = document.getElementById("signature");
     
-    var full = window.location.host;
+    var full = window.location.href;
     console.log(full)
-    console.log(document.referrer)
-    var parts = full.split(".");
-    if (parts.length > 2) {
-        title.innerHTML = parts[0];
+    console.log(window.location.href)
+    var parts = full.split("=");
+    if (parts.length > 1) {
+        title.innerHTML = parts[1];
     }
     var titleFinalText = title.innerHTML
     var projectsFinalText = projects.innerHTML
