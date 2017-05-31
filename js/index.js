@@ -5,6 +5,12 @@ window.onload = function() {
     var projects = document.getElementById("mainBarProjects");
     var about = document.getElementById("mainBarAbout");
     var signature = document.getElementById("signature");
+    
+    var full = window.location.host;
+    var parts = full.split(".");
+    if (parts.length > 2) {
+        title.innerHTML = parts[0];
+    }
     var titleFinalText = title.innerHTML
     var projectsFinalText = projects.innerHTML
     var aboutFinalText = about.innerHTML
