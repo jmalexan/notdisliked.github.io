@@ -7,6 +7,8 @@ window.onload = function() {
     var signature = document.getElementById("signature");
     
     var full = window.location.host;
+    console.log(full)
+    console.log(document.referrer)
     var parts = full.split(".");
     if (parts.length > 2) {
         title.innerHTML = parts[0];
